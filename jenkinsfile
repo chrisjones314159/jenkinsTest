@@ -1,23 +1,22 @@
 pipeline {
   agent any
-
   stages {
-    stage("echo & list"){
+    stage("list"){
       steps {
-        sh "echo 'hello world'"
-        sh "ls -a"
+        sh 'echo "hello world"'
+        sh 'ls -a'
       }
   }
-    stage("touch & mv"){
+    stage("mv"){
       steps {
-        sh "touch file1.txt"
-        mv "file1.txt file2.txt"
+        sh 'touch file1.txt'
+        mv 'file1.txt file2.txt'
       }
     }
-    stage("list  pwd"){
+    stage("pwd"){
       steps {
-        sh "ls"
-        sh "pwd"
+        sh 'ls'
+        sh 'pwd'
       }
     }
   }
