@@ -10,7 +10,7 @@ pipeline {
     stage("mv"){
       steps {
         sh 'touch file1.txt'
-        mv 'file1.txt file2.txt'
+        sh 'mv file1.txt file2.txt'
       }
     }
     stage("pwd"){
